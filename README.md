@@ -60,11 +60,47 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 ```
 
 ## Compile
+### Pre-requisites:
+```
+pip install cython
+``` 
+
 ```  
 cd $PATH_ROOT/libs/box_utils/cython_utils
 python setup.py build_ext --inplace
 ```
+### Error 1: 
+```
+File "setup.py", line 52, in locate_cuda
+    raise EnvironmentError('The CUDA %s path could not be located in %s' % (k, v))
+```
+### Solution 1: 
+Insert the following into ~/.bashrc and source it 
+```
+export CUDA_HOME=/usr/local/cuda-X.X
+where X.X is version of your cuda 
+```
+### Error 2: 
+```
+error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+```
+### Solution 2: 
+```
+Python 3, you'll need
 
+sudo apt-get install python3 python-dev python3-dev \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python-pip
+with Python 2, you'll need
+
+sudo apt-get install python-dev  \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python-pip
+
+
+```
 ## Demo(available)
 
 **Select a configuration file in the folder ($PATH_ROOT/libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/FPN_Tensorflow).**      
