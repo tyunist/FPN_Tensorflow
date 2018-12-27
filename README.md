@@ -60,6 +60,7 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 ```
 
 ## Compile
+* Face a lot of problems with python2 ! 
 ### Pre-requisites:
 ```
 pip install cython
