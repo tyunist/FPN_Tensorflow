@@ -59,7 +59,7 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 │       ├── JPEGImages
 ```
 
-## Compile
+## Compile with native machine 
 In this version, I run using python 2. Just, I have to ignore tfplot which is only compatible with python3.5 or above 
 ### Pre-requisites:
 ```
@@ -105,6 +105,24 @@ sudo apt-get install python-dev  \
 
 
 ```
+
+## Compile with Anaconda
+```
+mkdir ~/.envs
+cd ~/.envs
+conda create -n conda_tf3_gpu tensorflow
+conda activate conda_tf3_gpu
+conda install pandas 
+conda install cython
+conda install tensorflow-plot 
+conda install easydict
+conda install --channel https://conda.anaconda.org/menpo opencv3
+conda install pillow
+Download and install: https://pypi.org/project/tensorflow-plot/#files
+```
+
+
+
 ## Demo(available)
 
 **Select a configuration file in the folder ($PATH_ROOT/libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/FPN_Tensorflow).**      
