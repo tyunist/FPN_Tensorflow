@@ -60,10 +60,13 @@ This project is based on [Faster-RCNN](https://github.com/DetectionTeamUCAS/Fast
 ```
 
 ## Compile
-* Face a lot of problems with python2 ! 
+In this version, I run using python 2. Just, I have to ignore tfplot which is only compatible with python3.5 or above 
 ### Pre-requisites:
 ```
 pip install cython
+
+sudo apt-get install python-opencv
+pip install easydict
 ``` 
 
 ```  
